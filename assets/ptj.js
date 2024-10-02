@@ -87,18 +87,32 @@ modalCloses.forEach((modalClose) => {
 
 /*======================= Portfolio Swiper ===================*/
 var swiper = new Swiper(".portfolio__container", {
+  slidesPerView: 1,
+  spaceBetween: 10,
   cssMode: true,
   loop: true,
-
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+  }
 });
+
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll("section[id]");
