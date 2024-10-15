@@ -789,7 +789,7 @@ img {
 .contact__icon {
   font-size: 2rem;
   color: var(--first-color);
-  margin-right: var(--mb-0-75);
+  margin-right: var(--mb-1);
 }
 
 .contact__title {
@@ -831,7 +831,6 @@ img {
   color: #fff;
 =======
   padding-top: 2rem;
->>>>>>> c9803385fd17754e2aadbd7b40c9d2fa14eefde0
 }
 
 .footer__container {
