@@ -7,31 +7,30 @@
 
   /*======= Colors =======*/
   /* Change Favorite color */
-  --hue-color: 240;
+  --hue-color: 220;
 
   /*========= HSL Color mode =========*/
-  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color: hsl(var(--hue-color), 90%, 55%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-alt: hsl(var(--hue-color), 80%, 40%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --title-color: hsl(var(--hue-color), 8%, 10%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --input-color: hsl(var(--hue-color), 90%, 95%);
+  --body-color: hsl(var(--hue-color), 100%, 98%);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
   /*========= Font and typography ===========*/
   --body-font: "Poppins", sans-serif;
-
   --big-font-size: 2rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
   --smaller-font-size: 0.75rem;
 
   /*=========== Font weight ==========*/
@@ -57,27 +56,26 @@
 }
 
 /* Font Size for larger devices */
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 768px) {
   :root {
-    --big-font-size: 3rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.813rem;
+    --big-font-size: 2.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.5rem;
+    --h3-font-size: 2rem;
+    --normal-font-size: 1.125rem;
+    --small-font-size: 1rem;
   }
 }
 /*================= Variables Dark Theme ===============*/
 body.dark-theme {
   /*========= HSL Color mode =========*/
 
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
-  --title-color: hsl(var(--hue-color), 8%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
-  --container-color: hsl(var(--hue-color), 29%, 16%);
+  --first-color: hsl(var(--hue-color), 40%, 30%);
+  --title-color: hsl(var(--hue-color), 10%, 90%);
+  --text-color: hsl(var(--hue-color), 10%, 75%);
+  --input-color: hsl(var(--hue-color), 20%, 20%);
+  --body-color: hsl(var(--hue-color), 20%, 10%);
+  --container-color: hsl(var(--hue-color), 20%, 20%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
@@ -110,11 +108,12 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  margin: 0 0 var(--header-height) 0;
+  margin: 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  line-height: 1.6;
 }
 
 h1,
@@ -123,6 +122,7 @@ h3,
 h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-5);
 }
 ul {
   list-style: none;
@@ -135,16 +135,20 @@ img {
   height: auto;
 }
 .section {
-  padding: 2rem 0 4rem;
+  padding: 3rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .section__title {
   font-size: var(--h1-font-size);
+  text-align: center;
 }
 
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
+  text-align: center;
+  margin-bottom: var(--mb-1);
 }
 .section__title,
 .section__subtitle {
@@ -161,21 +165,26 @@ img {
   display: grid;
   gap: 1.5rem;
 }
+
+/*================ Header ===================*/
 .header {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--container-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
-  max-width: 968px;
+  max-width: 1200px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .nav__logo,
@@ -188,7 +197,7 @@ img {
   color: var(--first-color);
 }
 .nav__toggle {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .nav__toggle:hover {
@@ -345,14 +354,16 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: 1rem;
-  margin-bottom: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: var(--mb-1);
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .button:hover {
   background-color: var(--first-color-alt);
+  transform: translateY(-2px);
 }
 
 .button__icon {
@@ -391,7 +402,7 @@ img {
 /*===================== About ==================*/
 .about__img {
   width: 170px;
-  border-radius: 500%;
+  border-radius: 50%;
   justify-self: center;
   align-self: center;
   /* border: 1px solid #fff; */
@@ -399,7 +410,7 @@ img {
 
 .about__description {
   text-align: center;
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: var(--mb-2);
 }
 
 .about__info {
@@ -617,15 +628,17 @@ img {
 
 .services_container {
   gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .services__content {
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  padding: 3rem;
   border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
 .services__button {
@@ -703,9 +716,8 @@ img {
   padding: 0 1.5rem;
 }
 .portfolio__img {
-  width: 310px;
   border-radius: 0.5rem;
-  justify-self: center;
+  max-width: 100%;
 }
 .portfolio__title {
   font-size: var(--h3-font-size);
@@ -787,17 +799,19 @@ img {
   color: var(--text-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  border: none;
+  border: 1px solid var(--first-color);
   outline: none;
-  padding: 0.25rem 0.5rem 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 /*=================== Footer ==================*/
 
 .footer {
-  padding-top: 2rem;
+  padding: 2rem 0;
+  background-color: var(--first-color);
+  color: #fff;
 }
-
 .footer__container {
   row-gap: 3.5rem;
 }
