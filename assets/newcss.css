@@ -542,7 +542,16 @@ img {
 }
 
 /*==================== Qualifications ====================*/
+@media screen and (min-width: 768px) {
+  .qualification__container {
+    grid-template-columns: 1fr 1fr;
+  }
 
+  .qualification__content-container {
+    flex-direction: row;
+    align-items: start;
+  }
+}
 .qualification__content-container {
   display: flex;
   align-items: start;
