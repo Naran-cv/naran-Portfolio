@@ -543,13 +543,6 @@ img {
 
 /*==================== Qualifications ====================*/
 
-.qualification__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-} 
-
 .qualification__tabs {
   display: flex;
   justify-content: space-evenly;
