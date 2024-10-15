@@ -795,7 +795,13 @@ img {
 /*=================== Footer ==================*/
 
 .footer {
+<<<<<<< HEAD
+  padding: 2rem 0;
+  background-color: var(--first-color);
+  color: #ffffff;
+=======
   padding-top: 2rem;
+>>>>>>> c9803385fd17754e2aadbd7b40c9d2fa14eefde0
 }
 
 .footer__container {
