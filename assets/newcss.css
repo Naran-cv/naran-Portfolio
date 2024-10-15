@@ -542,13 +542,6 @@ img {
   row-gap: 3rem;
 }
 
-.qualification__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .qualification__title-container {
   text-align: center;
   margin-bottom: 2rem;
@@ -1120,7 +1113,7 @@ img {
     justify-content: center;
   }
   .qualification__button {
-    margin: 0 var(--mb-1);
+    margin: 0 var(--mb-3);
   }
   .qualification__sections {
     grid-template-columns: 0.5fr;
