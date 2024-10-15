@@ -825,11 +825,9 @@ img {
 /*=================== Footer ==================*/
 
 .footer {
-<<<<<<< HEAD
   padding: 2rem 0;
-  background-color: var(--first-color);
+  background-color: var(--text-color-light);
   color: #fff;
-=======
   padding-top: 2rem;
 }
 
@@ -838,7 +836,7 @@ img {
 }
 
 .footer__bg {
-  background-color: var(--first-color-second);
+  background-color: var(--first-color-light);
   padding: 2rem 0 3rem;
 }
 
@@ -1140,7 +1138,7 @@ img {
     background: none;
   }
   .project__container {
-    background-color: var(--first-color-second);
+    background-color: var(-first-color-second);
     border-radius: 1rem;
     padding: 3rem 2.5rem 0;
     grid-template-columns: 1fr max-content;
