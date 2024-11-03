@@ -395,6 +395,19 @@ img {
   margin-bottom: var(--mb-2-5);
 }
 
+.about__container {
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  min-height: 100vh; /* Full section height to ensure centering */
+}
+
+
+.centered {
+  max-width: 600px; /* Limit the width of the content */
+  text-align: center; /* Center the text within the content */
+}
+
 .about__info {
   display: flex;
   justify-content: space-evenly;
@@ -799,7 +812,7 @@ img {
 
 .contact__subtitle {
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: var(--first-color);
 }
 .contact__content {
   background-color: var(--input-color);
@@ -826,8 +839,8 @@ img {
 
 .footer {
   padding: 2rem 0;
-  background-color: var(--text-color-light);
-  color: #fff;
+  background-color: var(--first-color-second);
+  color: #ffffff;
   padding-top: 2rem;
 }
 
